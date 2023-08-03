@@ -1,0 +1,115 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body onload=final_project()> 
+
+
+<div>
+<h2 class="section">Final Project: NBA All Stars</h2>
+This project will analyze basketball statistics from the 2021-2022 NBA season in hopes of finding effective methods to predict all-stars.
+
+<br>
+<div>
+<h3>Points v Minutes:</h3>
+
+<div id="q1">
+We will be looking at the relationship between minutes played and points scored in order to begin eliminating players by their minutes played. The chart has a zoom feature enabled.
+
+    </div>
+    <h4>Scatterplot:</h4>
+    <div id="q1_plot" class="center_plot">
+    </div>
+
+As expected, their seems to be a positive relationship between the average minutes played and average points scored. We can begin by eliminating players that played less than 20 minutes.
+</div>    
+</div>
+    
+<div>
+<h3>Points by Position:</h3>
+All-stars are generally well spread out across positions, so let's breakdown the average points scored for each position. After removing players that played less than 20 minutes, we see that the distribution of points is relatively the same across positions. You can use the sort button to switch between ascending and descending order.
+
+<div id="q2">
+
+    </div>
+    <h4>Barchart:</h4>
+    <button type="button", id="sort_button">Sort me!</button>
+    <div id="q2_plot" class="center_plot">
+    </div>
+</div>    
+
+<div id="q2_5">
+
+</div>
+<h3>Points, Rebounds, and Assists by Position:</h3>
+While points does seem like a potential pick to determine all stars, let's explore other statistics. One popular metric is to combine the average points, rebounds, and assists of a player. This is displayed below.
+<h4>Stacked Barchart:</h4>
+<div id="q2_5_plot" class="center_plot">
+</div>
+A potential issue with this metric is that certain positions are expected to do really well in a certain category. For example, the 'PG' position is expected to get many assists while the 'C' position is expected to get a lot of rebounds.
+</div>    
+
+
+
+<div id="q4">
+
+</div>
+<h3>Correlation between Statistics</h3>
+Let's explore the correlation between these three major statistics. Let's also take a look at FG%, which is relevant to the efficiency of a player. Can you try and picture the correlations? Click the button to reveal the node link diagram.
+<h4>Node Link Diagram:</h4>
+
+<button type="button", id="reveal_button">Click to Reveal!</button>
+<div id="q4_plot" class="center_plot">
+</div>
+The thicker the edge, the higher the correlation between the statistics. As we can see, the average points seems to hae high correlation with the average rebounds and assists. the FG% doesn't seem to provide to much value.
+</div>    
+
+<div>
+    <h3>Distribution of Players:</h3>
+    Let's explore where some of these high quality players come from. Players from Canada were assigned to Washington, while any players that were traded midseason were assigned to Maine. Is there any sort of correlation between location and quality of players?
+
+<div id="q3">
+
+    </div>
+    <h4>Geo-Map:</h4>
+    <div id="q3_plot" class="center_plot">
+    </div>
+    It looks like big market teams seem to have the bulk of the quality players, which makes sense as players want to play in bigger, more popular cities. However, it is important to remember that some of the big market states all have multiple teams. Something noteworthy is the number of players that were traded. It seems that higher quality players are more likely to be traded.
+</div>    
+
+<h3>Visualization Analysis</h3>
+<h4>Visualization 1</h4>
+<ul>
+    <li>I went with Red for its simplicity and its ability to capture attention.</li>
+    <li>The mark here would be points, while the channel would be position.</li>
+</ul>
+<h4>Visualization 2</h4>
+<ul>
+    <li>I stayed with the Red for its simplicity and its ability to capture attention.</li>
+    <li>The mark here would be areas and the channels would be length and position.</li>
+</ul>
+<h4>Visualization 3</h4>
+<ul>
+    <li>I went with Red for points to stay consistent. I then went with Blue and Green for the other two statistics because of their simplicity.</li>
+    <li>The mark here would be area and the channels would be length, color, and position.</li>
+</ul>
+<h4>Visualization 4</h4>
+<ul>
+    <li>I went with neutral colors like black and grey to avoid excessive flashiness and keep it direct.</li>
+    <li>The marks here would be points and lines and the channels would be the width of the edges.</li>
+</ul>
+<h4>Visualization 5</h4>
+<ul>
+    <li>I went with blue because it was pleasant on the eyes and it was relatively easy to the the change in the shades of color.</li>
+    <li>The mark here would be area and the channel would be color.</li>
+</ul>
+
+    
+   
+</body>  
+</html>  
